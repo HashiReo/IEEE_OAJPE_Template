@@ -1,0 +1,57 @@
+{
+	"name": "IEEE PES LaTeX Environment",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"james-yu.latex-workshop",
+				"mhutchie.git-graph"
+			],
+			"settings": {
+				"latex-workshop.latex.outDir": "./out",
+				"latex-workshop.latex.recipes": [
+					{
+						"name": "latexmk (lualatex)",
+						"tools": [
+							"latexmk_lualatex"
+						]
+					},
+					{
+						"name": "latexmk (pdflatex)",
+						"tools": [
+							"latexmk_pdflatex"
+						]
+					}
+				],
+				"latex-workshop.latex.tools": [
+					{
+						"name": "latexmk_lualatex",
+						"command": "latexmk",
+						"args": [
+							"-lualatex",
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"-outdir=%OUTDIR%",
+							"%DOC%"
+						]
+					},
+					{
+						"name": "latexmk_pdflatex",
+						"command": "latexmk",
+						"args": [
+							"-pdf",
+							"-synctex=1",
+							"-interaction=nonstopmode",
+							"-file-line-error",
+							"-outdir=%OUTDIR%",
+							"%DOC%"
+						]
+					}
+				]
+			}
+		}
+	}
+}
