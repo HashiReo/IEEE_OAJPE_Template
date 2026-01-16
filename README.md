@@ -18,7 +18,7 @@
 - このリポジトリを Clone しないでください。
 - 必ず **[Use this template]** ボタンから自分のリポジトリを作成して作業してください。
 - 直接このリポジトリの Clone と Push をしないでください。
-- IEEE PES TEMPLATES AND SAMPLES OF PES TECHNICAL PAPERS「https://ieee-pes.org/publications/authors-kit/templates-and-sample-of-pes-technical-papers/」のLaTeX Template for the IEEE Open Access Journal of Power and Energy 「https://ieee-pes.org/wp-content/uploads/2024/04/OAJPE_template_Revised04052024.zip」からテンプレートをダウンロードしてきていますが、成果物（main.pdf）がテンプレートに沿っているかは各々でも確認してください。
+- [IEEE PES TEMPLATES AND SAMPLES OF PES TECHNICAL PAPERS](https://ieee-pes.org/publications/authors-kit/templates-and-sample-of-pes-technical-papers/) の[LaTeX Template for the IEEE Open Access Journal of Power and Energy](https://ieee-pes.org/wp-content/uploads/2024/04/OAJPE_template_Revised04052024.zip) からテンプレートをダウンロードしてきていますが、成果物（main.pdf）がテンプレートに沿っているかは各々でも確認してください。
 
 
 ## 1. 前提条件
