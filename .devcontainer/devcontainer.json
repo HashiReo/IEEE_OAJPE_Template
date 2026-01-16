@@ -1,8 +1,7 @@
 {
 	"name": "IEEE PES LaTeX Environment",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	// Dockerfileの場所を指定
+	"build": {"dockerfile": "Dockerfile"},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -10,45 +9,25 @@
 				"mhutchie.git-graph"
 			],
 			"settings": {
-				"latex-workshop.latex.outDir": "./out",
+				"latex-workshop.latex.autoClean.run": "onBuilt",
 				"latex-workshop.latex.recipes": [
 					{
-						"name": "latexmk (lualatex)",
+						"name": "latexmk (auto)",
 						"tools": [
-							"latexmk_lualatex"
-						]
-					},
-					{
-						"name": "latexmk (pdflatex)",
-						"tools": [
-							"latexmk_pdflatex"
+							"latexmk"
 						]
 					}
 				],
 				"latex-workshop.latex.tools": [
 					{
-						"name": "latexmk_lualatex",
+						"name": "latexmk",
 						"command": "latexmk",
 						"args": [
-							"-lualatex",
-							"-synctex=1",
 							"-interaction=nonstopmode",
 							"-file-line-error",
-							"-outdir=%OUTDIR%",
 							"%DOC%"
-						]
-					},
-					{
-						"name": "latexmk_pdflatex",
-						"command": "latexmk",
-						"args": [
-							"-pdf",
-							"-synctex=1",
-							"-interaction=nonstopmode",
-							"-file-line-error",
-							"-outdir=%OUTDIR%",
-							"%DOC%"
-						]
+						],
+						"env": {}
 					}
 				]
 			}

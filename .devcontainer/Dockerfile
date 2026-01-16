@@ -1,11 +1,11 @@
-# .devcontainer/Dockerfile
+# IEEE標準に合わせて、公式のTeX Liveイメージを使用
+# (これ自体にlatexmkや必要なパッケージは含まれています)
+FROM registry.gitlab.com/islandoftex/images/texlive:latest
 
-FROM paperist/texlive-ja:latest
-# package update
+# 最低限のツール（Gitなど）だけインストール
 RUN apt-get update \
-# install git and openssh-client
-# - git           : for git version control and clone repositories
-# - openssh-client: for using ssh, scp, sftp commands and ssh key management
-&& apt-get install -y git openssh-client \
-&& apt-get clean \
-&& rm -rf /var/lib/apt/lists/*
+    && apt-get install -y git openssh-client \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
