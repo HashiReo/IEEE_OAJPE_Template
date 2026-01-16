@@ -44,6 +44,6 @@
 - タイトルや各セクション、本文編集はmain.texを編集してください。
   - 保存「ctrl + s」すると都度、main.pdfが生成されます。
 - 図は imagesフォルダで管理してください。(main.tex内で例示しています)
-- 参考文献は references.bib で管理してください。（main.tex内で例示しています）
+- 参考文献は現状、main.texで手打ちになっています。面倒な場合はreferences.bibを新しく作成し管理してください。
 - 細かい tex 記法は ChatGPT or Geminiに聞いてください。
 - 変更をGitHubにPushすると、自動的にActionが起動し、READMEの **最新のPDFをダウンロード** にリンクが掲載されます(少し時間がかかります)。
